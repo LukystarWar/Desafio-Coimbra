@@ -1,0 +1,21 @@
+{{#each erros}}
+    {{!-- Mostra a mensagem de erro personalizada --}}
+    <div>{{texto}}</div>
+{{/each}}
+
+<form action="/usuarios/login" method="post" class="login">
+<h1>Entrar</h1>
+<hr>
+
+    {{!-- Campo de Email --}}
+    <label for="email" aria-autocomplete="none" >E-mail: </label>
+        <input type="email" name="email">
+    {{!-- Campo de Senha --}}
+    <label for="senha">Senha: </label>
+        <input type="password" name="senha">
+    {{!-- link para se cadastrar --}}
+    <span>Não tem cadastro? Cadastre-se <a href="/usuarios/cadastro">aqui</a></span>
+
+    <button type="submit" class="btn-primary">Entrar</button>
+
+</form>

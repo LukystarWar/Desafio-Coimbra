@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/css/select2.min.css" />
+    <link rel="stylesheet" href="/css/main.css">
+    {{#if css}} {{!-- Se houver css específico da página --}}
+    <link rel="stylesheet" href="/css/{{css}}.css">
+    {{/if}} 
+    <title>Desafio Coimbra</title>
+</head>
+
+<body>
+    <header>
+        {{!-- Importa a navbar em todas as páginas --}}
+        {{>_navbar}} 
+    </header>
+
+    <section>
+        <div class="container">
+            {{>_msg}} {{!-- Caso tenha uma mensagem de alerta --}}
+            {{{body}}}  {{!-- Local onde é carregado a página atual --}}
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/js/select2.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/simple-mask-money.js"></script>
+    {{#if js}} {{!-- Se houver js específico da página --}}
+    <script src="/js/{{js}}.js"></script>
+    {{/if}}
+</body>
+
+</html>

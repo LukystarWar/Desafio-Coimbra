@@ -1,0 +1,26 @@
+<h1>Editar Empresa</h1>
+<form action="/admin/editar/empresa" method="post">
+    <div class="form"> {{!-- Inicio div formulário  --}}
+        
+        {{!-- Campo que guarda o id do item editado --}}
+        <input type="hidden" name="id" value="{{empresa._id}}">
+
+        {{!-- Campo preenchido com cnpj atual --}}
+        <label for="cnpj">Cnpj: </label>
+            <input type="text" name="cnpj" class="form-items" placeholder="Digite o Cnpj" value="{{empresa.cnpj}}">
+        {{!-- Campo preenchido com razão social atual --}}
+        <label for="razao">Razão Social: </label>
+            <input type="text" name="razao" class="form-items" placeholder="Digite a Razão Social" value="{{empresa.razao}}">
+        {{!-- Campo preenchido com endereço atual --}}
+        <label for="endereco">Endereço: </label>
+            <input type="text" name="endereco" class="form-items" placeholder="Digite o Endereço" value="{{empresa.endereco}}">
+        {{!-- Campo preenchido com Telefone atual --}}
+        <label for="endereco">Telefone: </label>
+            <input type="text" name="telefone" class="form-items" placeholder="Digite o telefone" value="{{empresa.telefone}}">
+
+
+        <div class="controls">
+            <button type="submit" class="btn-primary">Salvar Edição</button>
+        </div>
+    </div> {{!-- Fim div formulário --}}
+</form>

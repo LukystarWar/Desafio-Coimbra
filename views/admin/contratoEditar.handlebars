@@ -1,0 +1,75 @@
+<h1>Novo Contrato</h1>
+<hr>
+<form action="/admin/editar/contrato" method="post">
+    <div class="form"> {{!-- Inicio div formulário --}}
+
+        {{!-- Campo que guarda o id do item editado --}}
+        <input type="hidden" name="id" value="{{contrato._id}}">
+
+        {{!-- Seleção do Contratante --}}
+        <label for="contratante">Contratante: </label>
+        <select name="contratante">
+            {{!-- A primeira option preenche o contratante atual --}}
+            <option value="{{contratante._id}}">{{contratante.razao}}</option>
+            {{!-- Lista todas as empresas cadastradas, por razão social --}} 
+            {{#each empresas}} 
+                <option value="{{_id}}">{{razao}}</option>
+            {{else}}
+                <option value="0">Nenhuma empresa cadastrada</option>
+            {{/each}}
+        </select>
+
+        {{!-- Seleção do Contratado --}}
+        <label for="contratado">Contratado: </label>
+        <select name="contratado">
+            {{!-- A primeira option preenche o contratado atual --}}
+            <option value="{{contratado._id}}">{{contratado.razao}}</option>
+            {{!-- Lista todas as empresas cadastradas, por razão social --}}
+            {{#each empresas}} 
+                <option value="{{_id}}">{{razao}}</option>
+            {{else}}
+                <option value="0">Nenhuma empresa cadastrada</option>
+            {{/each}}
+        </select>
+
+        {{!-- Tipo do contrato --}}
+        <label for="tipo">Tipo do Contrato: </label>
+        <select name="tipo">
+            {{!-- A primeira option preenche o tipo atual --}}
+            <option value="{{contrato.tipo}}">{{contrato.tipo}}</option>
+
+            <option value="Empréstimo">Empréstimo</option>
+            <option value="Arrendamento">Arrendamento</option>
+            <option value="Seguro">Seguro</option>
+            <option value="Locação">Locação</option>
+        </select>
+
+        {{!-- Vigência do Contrato --}}
+        <label for="vigencia">Vigência: </label>
+            <input type="date" name="vigencia" class="form-items" value="{{contrato.vigencia}}">
+        {{!-- Data de inicio --}}
+        <label for="inicio">Inicio: </label>
+            <input type="date" name="inicio" class="form-items" value="{{contrato.prazoInicio}}">
+        {{!-- Data de fim --}}
+        <label for="fim">Fim: </label>
+            <input type="date" name="fim" class="form-items" value="{{contrato.prazoFim}}">
+        {{!-- Carência --}}
+        <label for="carencia">Carência: </label>
+            <input type="date" name="carencia" class="form-items" value="{{contrato.carencia}}">
+        {{!-- Valor do Contrato --}}
+        <label for="valor">Valor: </label>
+            <input inputmode="numeric" id="myInput" name="valor" class="form-items" value="{{contrato.valor}}">
+        {{!-- Status --}}
+        <label for="status">Status:</label>
+            <select name="status" id="status">
+                <option value="Ativo">Ativo</option>
+                <option value="Cancelado">Cancelado</option>
+            </select>       
+
+        {{!-- Àrea de botões --}}
+        <div class="controls">
+            <button type="submit" class="btn-primary">Salvar Alterações</button>
+        </div>
+
+    </div> {{!-- Fim div formulário --}}
+</form>

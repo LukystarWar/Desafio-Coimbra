@@ -1,0 +1,75 @@
+*{
+    color: white !important;
+}
+.container{
+    width: 100%; display: block
+}
+hr{
+    margin-bottom: 20px;
+}
+td{
+    height: 20px !important;
+}
+.table{
+    height: 750px;
+    overflow: auto;
+}
+
+table{
+    padding: 20px 0;
+}
+th{
+    color: white;
+    font-size: 18px;
+    transition: ease-in-out 0.5s;
+    font-weight: 400 !important;
+    border: 1px solid var(--color2);
+    background-color: var(--color1);
+}
+th:active{
+    background-color: var(--color2);
+}
+input{
+    width: 500px;
+    margin: 0 20px;
+    font-size: 16px;
+    color: black !important;
+    text-align: center;
+    outline-style: none;
+    background-color: white !important;
+}
+td{
+    color: black !important;
+    border-left: 1px solid rgba(128, 128, 128, 0.185);
+}
+select{
+    width: 50px !important;
+    color: white !important;
+}
+/* Icones */
+.ico{
+    width: 30px;
+    height: 30px;
+    transition: ease-in-out 0.5s;
+}
+.ico:hover{
+    width: 35px;
+    height: 35px;
+}
+#delete{
+    margin-top: -30px !important;
+    margin-left: -19px !important;
+}
+#delete:hover{
+    margin-top: -15px !important;
+    margin-left: -22px !important;
+}
+button{
+    border: none;
+    width: 0px !important;
+    height: 0px !important;
+    background-color: transparent !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+    color: white !important;
+}

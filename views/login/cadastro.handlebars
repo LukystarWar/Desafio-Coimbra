@@ -1,0 +1,25 @@
+{{#each erros}}
+    {{!-- Mostra a mensagem de erro personalizada --}}
+    <div>{{texto}}</div> 
+{{/each}}
+
+<form action="/usuarios/cadastro" method="post" class="login">
+<h1>Cadastrar</h1>
+<hr>
+
+    {{!-- Campo de Nome --}}
+    <label for="nome">Nome: </label>
+        <input type="text" name="nome">
+    {{!-- Campo de Email --}}
+    <label for="email">E-mail: </label>
+        <input type="email" name="email">
+    {{!-- Campo de Senha --}}
+    <label for="senha">Senha: </label>
+        <input type="password" name="senha">
+    {{!-- Campo de repetição de senha --}}
+    <label for="senha2">Repita a Senha: </label>
+        <input type="password" name="senha2">
+    
+    <button type="submit" class="btn-primary">Cadastrar</button>
+
+</form>

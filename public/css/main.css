@@ -1,0 +1,181 @@
+:root{
+    --color1: #007bc2;
+    --color2: #183d86;
+    --color3: #69f;
+}   
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+body{
+    background: linear-gradient(to right, var(--color1), var(--color2));
+}
+/* Inicio Nav */
+nav {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    background: var(--color2);
+    justify-content: space-between;
+    background-color: var(--color2);
+}
+nav> div{
+    height: 20px;
+}
+nav > div> ul{
+    display: flex;
+}
+.nav-link, .logo{
+    padding: 15px;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    animation: ease-in-out;
+}
+.nav-link:hover{
+    color: black !important;
+    background: #def2f7;
+}
+/* Fim Nav */
+
+.container{
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+}
+.form{
+    display: grid;
+    width: 700px;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    justify-items: center;
+    place-items: baseline;
+    font: bold 20px verdana;
+    box-shadow: 0 0 5px 0 white;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+.form-items, select{
+    width: 350px;
+    height: 28px;
+    padding: 10px;
+    border-radius: 4px;
+    outline-style: none;
+    border: 1px solid rgba(128, 128, 128, 0.555);
+}
+span{
+    font: normal 15px verdana;
+}
+.form > label{
+    margin-top: 20px;
+    justify-self: baseline;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+hr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+h1{
+    color: white;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+h2{
+    margin-top: 20px;
+}
+.logo{
+    padding: 0;
+    width: 106px;
+    height: auto;
+    transition: ease-in-out 0.5s;
+}
+.logo:hover{
+    margin-left: -15px;
+}
+.btn-primary{
+    margin: 15px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    font: 400 15px verdana;
+    animation: ease-in-out;
+    border-color: var(--color1);
+    background-color: var(--color2);
+}
+.btn-primary:hover{
+    border-color: var(--color1);
+    background-color: var(--color1);
+}
+.controls{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+::placeholder{
+    font-size: 15px;
+}
+td,tr,th,table{
+    text-align: center;
+    font: normal 15px verdana;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+}
+
+/* Alertas */
+.alert-success, .alert-danger{
+    display: grid;
+    width: 500px;
+    height: 60px;
+    color: white;
+    padding: 0 20px;
+    animation: bye 5s;
+    animation-delay: 3s;
+    align-content: center;
+    justify-content: center;
+    animation-fill-mode: forwards;
+    background-color: rgba(0, 128, 0, 0.719);
+}
+.alert-danger{
+    background-color: crimson;
+}
+@keyframes bye{
+    100% { margin-left: -3000px; }
+}
+
+
+/* Vrum Dc */
+.vrum{
+    display: block;
+}
+.carrinho{ 
+    animation: vrum 10s infinite;
+}
+@keyframes vrum{
+    0% {margin-left: 100%;}
+}
+.rua{
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.884);
+}
+.faixas{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.faixa{
+    width: 50px;
+    height: 10px;
+    margin-top: 20px;
+    background-color: rgb(221, 224, 7);
+}
+.banner{
+    display: grid;
+}

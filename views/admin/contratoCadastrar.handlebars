@@ -1,0 +1,68 @@
+<h1>Novo Contrato</h1>
+<hr>
+<form action="/admin/cadastrar/contrato" method="post">
+
+    <div class="form"> {{!-- Inicio div formulário --}}
+        {{!-- Seleção do Contratante --}}
+        <label for="contratante">Empresa Contratante: </label>
+        <select name="contratante">
+            <option value="0">Selecione uma Empresa</option>
+            {{!-- Lista todas as empresas cadastradas, por razão social --}}
+            {{#each empresas}}
+                <option value="{{_id}}">{{razao}}</option>
+            {{else}}
+                <option value="0">Nenhuma empresa cadastrada</option>
+            {{/each}}
+        </select>
+
+        {{!-- Seleção do Contratado --}}
+        <label for="contratado">Empresa Contratada: </label>
+        <select name="contratado">
+            <option value="0">Selecione uma Empresa</option>
+            {{!-- Lista todas as empresas cadastradas, por razão social --}}
+            {{#each empresas}}
+                <option value="{{_id}}">{{razao}}</option>
+            {{else}}
+                <option value="0">Nenhuma empresa cadastrada</option>
+            {{/each}}
+        </select>
+
+        {{!-- Tipo do contrato --}}
+        <label for="tipo">Tipo do Contrato: </label>
+        <select name="tipo">
+
+            <option value="0">Selecione um tipo</option>
+            <option value="Empréstimo">Empréstimo</option>
+            <option value="Arrendamento">Arrendamento</option>
+            <option value="Seguro">Seguro</option>
+            <option value="Locação">Locação</option>
+
+        </select>
+
+        {{!-- Vigência do Contrato --}}
+        <label for="vigencia">Data de Vigência: </label>
+            <input type="date" name="vigencia" class="form-items">
+        {{!-- Data de inicio --}}
+        <label for="inicio">Data de Inicio: </label>
+            <input type="date" name="inicio" class="form-items">
+        {{!-- Data de fim --}}
+        <label for="fim">Data de Fim: </label>
+            <input type="date" name="fim" class="form-items">
+        {{!-- Carência --}}
+        <label for="carencia">Data final de Carência: </label>
+            <input type="date" name="carencia" class="form-items">
+        {{!-- Valor do Contrato --}}
+        <label for="valor">Valor do Contrato: </label>
+            <input inputmode="numeric" id="myInput" name="valor" class="form-items">
+        {{!-- Status --}}
+        <label for="status">Status:</label>
+            <input type="text" value="Em Edição" class="form-items" disabled>
+    
+        {{!-- Àrea de botões --}}
+        <div class="controls">
+            <button type="reset" class="btn-primary">Limpar</button>
+            <button type="submit" class="btn-primary">Finalizar</button>
+        </div>
+
+    </div>{{!-- Fim div formulário --}}
+</form>

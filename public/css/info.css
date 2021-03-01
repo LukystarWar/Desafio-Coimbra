@@ -1,0 +1,36 @@
+.info{
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    grid-template-columns: 1fr;
+    place-self: center;
+    height: fit-content;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 white;
+}
+h1{
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
+#title{
+    text-align: center;
+}
+#hrtitle{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.subinfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+label, p{
+    font: bold 20px verdana;
+    color: rgba(0, 0, 0, 0.658);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+}
+p{
+  color: grey;
+}

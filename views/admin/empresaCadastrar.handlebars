@@ -1,0 +1,26 @@
+<h1>Cadastrar Empresa</h1>
+<hr>
+<form action="/admin/cadastrar/empresa" method="post">
+    <div class="form"> {{!-- Inicio div formulário --}}
+
+        {{!-- Campo de Cnpj --}}
+        <label for="cnpj">Cnpj da Empresa: </label>
+            <input type="text" name="cnpj" class="form-items" placeholder="Digite o Cnpj" required>
+        {{!-- Campo de Razão Social --}}
+        <label for="razao">Razão Social: </label>
+            <input type="text" name="razao" class="form-items" placeholder="Digite a Razão Social" required>
+        {{!-- Campo de Endereço --}}
+        <label for="endereco">Endereço Completo: </label>
+            <input type="text" name="endereco" class="form-items" placeholder="Digite o Endereço" required>
+        {{!-- Campo de Telefone --}}
+        <label for="endereco">Telefone: </label>
+            <input type="text" name="telefone" class="form-items" placeholder="Digite o telefone" required>
+        
+        {{!-- Àrea de botões --}}
+        <div class="controls">
+            <button type="reset" class="btn-primary">Limpar</button>
+            <button type="submit" class="btn-primary">Finalizar</button>
+        </div>
+
+    </div> {{!-- Fim div formulário --}}
+</form>

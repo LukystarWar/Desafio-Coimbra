@@ -1,0 +1,36 @@
+<nav> {{!-- Inicio da barra --}}
+
+  <li><img class="logo" src="/img/dc.png" alt=""></li> {{!-- Logo DC --}}
+  
+  {{#if user}} {{!-- Se estiver logado exibe estas opções --}}
+
+  <div>
+    <ul>
+      <li class="nav-item"><a class="nav-link" href="/admin">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="/admin/cadastrar/contrato">Novo Contrato</a></li>
+      <li><a class="nav-link" href="/admin/listar/contratos">Listar Contratos</a></li>
+      <li><a class="nav-link" href="/admin/cadastrar/empresa">Cadastrar Empresa</a></li>
+      <li><a class="nav-link" href="/admin/listar/empresas">Listar Empresas</a></li>
+    </ul>
+  </div>
+
+
+  <div>
+    <ul>
+      <li><a class="nav-link" href="#">Olá, {{{username}}}</a></li>
+      <li><a class="nav-link" href="/usuarios/logout">Sair</a></li>
+    </ul>
+  </div>
+
+  {{else}} {{!-- Caso não esteja logado, apenas exibe estas opções --}}
+
+  <div>
+    <ul>
+      <li><a class="nav-link" href="/usuarios/login">Entrar</a></li>
+      <li><a class="nav-link" href="/usuarios/cadastro">Cadastrar</a></li>
+    </ul>
+  </div>
+
+  {{/if}}
+ 
+</nav> {{!-- Fim da barra --}}
