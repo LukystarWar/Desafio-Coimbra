@@ -17,11 +17,11 @@ Caso dê bloqueio na execução de scripts:
 
 Caso necessário, mudar porta no arquivo app.js
 
--npm install             // Instala as dependências
+- npm install             // Instala as dependências
 
 Em um cmd execute:
--mongod                  // Roda o banco
+- mongod                  // Roda o banco
 
--npm start / npm app.js  // Roda o servidor
+- npm start / npm app.js  // Roda o servidor
 
 Acessar no navegador: Localhost:porta
